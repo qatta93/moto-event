@@ -1,0 +1,14 @@
+{
+  "name": "moto-stronka",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass main.scss main.css -w"
+  },
+  "author": "Patrycja Panasiuk",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.13.0"
+  }
+}

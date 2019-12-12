@@ -1,0 +1,34 @@
+footer {
+    position: relative;
+    height: 30rem;
+    background-color: $color-black;
+    color: $color-white;
+}
+
+.social {
+    @include absCenter;
+    text-align: center;
+    line-height: 2rem;
+}
+
+
+
+.author {
+    position: absolute;
+    bottom: 1rem;
+    text-align: center;
+    width: 100%;
+    transition: all .2s;
+}
+
+.qatta {
+    cursor: pointer;
+    transition: all .2s;
+    text-decoration: none;
+    color: yellow;
+    margin: 0 0.5rem;
+    
+    &:hover {
+        transform: scale(1.3);
+    }
+}

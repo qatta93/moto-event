@@ -1,0 +1,99 @@
+// .intro__pictures {
+//     @include absCenter;
+//     width: 100%;
+//     margin: 0 auto;
+//     position: absolute;
+//     top: 15rem;
+// }
+
+.intro {
+
+    &__slides {
+        display: block;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: absolute;
+
+    & > * {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 80%;
+        animation: slide 32s infinite;
+        overflow: hidden;
+        animation-timing-function: ease;
+    }
+
+    &--1 {
+        left: 0%;
+        animation-delay: 27s;
+        background-image: url(/img/intro/intro-1_small.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    &--2 {
+        animation-delay: 23s;
+        background-image: url(/img/intro/intro-2_small.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    &--3 {
+        animation-delay: 20s;
+        background-image: url(/img/intro/intro-3_small.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    &--4 {
+        animation-delay: 17s;
+        background-image: url(/img/intro/intro-4_small.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    &--5 {
+        animation-delay: 14s;
+        background-image: url(/img/intro/intro-5_small.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    &--6 {
+        animation-delay: 11s;
+        background-image: url(/img/intro/intro-6_small.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    &--7 {
+        animation-delay: 8s;
+        background-image: url(/img/intro/intro-7_small.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    &--8 {
+        animation-delay: 5s;
+        background-image: url(/img/intro/intro-8_small.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    &--9 {
+        animation-delay: 2s;
+        background-image: url(/img/intro/intro-9_small.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    &--10 {
+        animation-delay: -1.5s;
+        background-image: url(/img/intro/intro-10_small.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+   }
+}

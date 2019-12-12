@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <!-- TODO czy potrzebuję czcionki lato? -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Dosis:300,400,700|Permanent+Marker&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+          $("html").on("submit","#contact_form",function(e){
+            e.preventDefault();
+            $("#send_form_status").html('').hide();
+            var data=$("#contact_form").serialize();
+            $.post("/send_form.php",data,function(res){
+              $("#send_form_status").html(res.msg).show();
+              if(res.status==1){ 
+                $("#contact_form")[0].reset();
+              } 
+            });
+          });
+        });
+    </script>
+    <!-- co to?? -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- zmień ścieżkę do main.css -->
+    <link rel="stylesheet" href="dist/css/main.css">
+    <link rel="stylesheet" href="css/icon-font.css">
+    <link rel="stylesheet" href="css/icon-font-ecommerce.css">
+    <!-- wstaw czcionki -->
+
+    <!-- wstaw logo // PO CO TO?-->
+    <link rel="shortcut icon" type="image/png" href="img/">
+    <title>| Moto Date Poland vol.1</title>
+</head>
+<body>
+<!-- INTROOOOOOOO -->
+    <section class="intro">
+            <img src="/img/logo.jpg" alt="logo" class="intro__logo">
+            <!-- <img srcset="" alt=""> -->
+        <slider class="intro__slides">
+            <slide class="intro__slides--1"><p></p></slide>
+            <slide class="intro__slides--2"><p></p></slide>
+            <slide class="intro__slides--3"><p></p></slide>
+            <slide class="intro__slides--4"><p></p></slide>
+            <slide class="intro__slides--5"><p></p></slide>
+            <slide class="intro__slides--6"><p></p></slide>
+            <slide class="intro__slides--7"><p></p></slide>
+            <slide class="intro__slides--8"><p></p></slide>
+            <slide class="intro__slides--9"><p></p></slide>
+            <slide class="intro__slides--10"><p></p></slide>
+        </slider>
+        <!-- <figure class="intro__pictures">
+            <img src="img/intro/intro-1_small.jpg" alt="motocykle" class="intro__pictures">
+            <img src="img/intro/intro-2_small.jpg" alt="motocykle" class="intro__pictures">
+            <img src="img/intro/intro-3_small.jpg" alt="motocykle" class="intro__pictures">
+            <img src="img/intro/intro-4_small.jpg" alt="motocykle" class="intro__pictures">
+            <img src="img/intro/intro-5_small.jpg" alt="motocykle" class="intro__pictures">
+            <figcaption class="intro__caption">Jesteśmy różni, ale łączy nas jedno.. PASJA</figcaption>
+        </figure> -->
+        <p class="intro__sentence">Możemy być różni, ale łączy nas jedno.. pasja</p>
+        <a href="#home" class="btn btn--blue btn--animated btn--intro">POMIŃ</a>
+    </section>  <!-- koniec sekcji intro -->
+
+    <setion class="home" id="home">
+        <!-- nie dodaję zdjęcia, będzie background image -->
+        <header class="header">
+            <div class="header__navi">
+                <img src="/img/LOGO.jpg" alt="logo" class="header__navi-logo">
+                <div class="header__navi-title">Moto Date Poland</div>
+                <ul class="header__navi-list">
+                    <!-- NIE DZIAŁAJĄ ODSYŁACZE -->
+                    <li><a href="#home/#info" class="header__navi-list-link icon-basic-info"> info </a></li>
+                    <li><a href="#tickets" class="header__navi-list-link icon-ecommerce-ticket"> bilety </a></li>
+                    <li><a href="#attractions" class="header__navi-list-link icon-basic-map"> mapa atrakcji </a></li>
+                    <li><a href="#schedule" class="header__navi-list-link icon-basic-clock"> harmonogram </a></li>
+                    <li><a href="#acommodation" class="header__navi-list-link icon-basic-home"> noclegi </a></li>
+                    <li><a href="#shop" class="header__navi-list-link icon-ecommerce-basket"> sklep </a></li>
+                    <li><a href="#contact" class="header__navi-list-link icon-basic-message-txt"> kontakt</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <main>
+            <section class="sponsors">
+                <p>TU BĘDĄ LOGA SPONSORÓW</p>
+            </section>
+
+            <section class="about">
+                <div class="info" id="info">
+                    <div class="row">
+                        <div class="col-2-of-3">
+                            <div class="info__container">
+                                <h2 class="info__header"> 
+                                <b>INFO</b>
+                                 — 
+                                <br>
+                                O co to chodzi?
+                                </h2>
+                            </div>
+                        </div>
+                            <p class="info__text">Witajcie!!! 
+                                    Mamy dla Was mam nadzieję świetną informację. 
+                                    Planujemy zorganizować razem z "Motocyklista szuka żony" oraz innymi grupami na FB z 20 na 21 czerwca 2020 "coś" czego jeszcze w Polsce nie było a największym filozofom się nie śniło. 
+                                    Będzie to moto zlot, grill, impreza masowa, event, wydarzenie, spotkanie, widowisko, festiwal, pompa oraz feta w jednym :D specjalnie dla Was czyli dla Moto Singielek, Moto Singli, Moto Plecaczków, Moto Par, Moto Maniaków, przyszłych i niedoszłych Moto Pasjonatów oraz innych pozytywnie zakręconych ludzi. 
+                                    W programie między innymi koncert z muzyką Rock, Disco Polo oraz muzyką klubową czyli konkretna potańcówka, będą wybory Miss i Mistera Singli, wybory najładniejszego i najbrzydszego motocykla, pokazy z pierwszej pomocy, punkt z pomocą i doradztwem technicznym, Moto Wojsko, Moto Ratownicy, Moto Policja, pokazy Straży Pożarnej, Food Trucki z pysznym jedzonkiem, maszyna do nauki Wheelie plus konkursy z tym związane, sklep z akcesoriami Motocyklowymi, w odległości 10 metrów duża plaża z kąpieliskiem, restauracja "Chata Wuja Toma" z domowym pysznym jedzeniem przy samej plaży, siatkówka plażowa, grochówka z kotła, maszyny i gry zręcznościowe, mobilny escape room, malowanie obrazów poprzez "palenie gumy", konkurs ilości decybeli, konkurs tylko dla "plecaczków", konkursy z umiejętności jazdy, konkursy moto zręcznościowe, pokazy sztucznych ogni, niedzielne grillowanie oraz Msza Święta w kościele, konkursy dla widzów oraz fanów dwóch kółek i o wiele więcej innych atrakcji nad którymi jeszcze pracujemy ;) możecie również składać swoje propozycje pod postem. 
+                                    Miejsce tego wydarzenia to przeuroczy zakątek z mega klimatem w Zaniemyślu koło Kórnika województwo Wielkopolskie. Nie ma znaczenia czy jesteś z drugiego końca Polski ponieważ impreza jest dwudniowa a Zaniemyśl ma bardzo rozbudowaną bazę noclegową: domki, pola namiotowe i hotele więc wszyscy się pomieścimy ;) 
+                                    Impreza będzie wydarzeniem masowym, zamkniętym, biletowanym z opaskami. Sprzedaż biletów odbywać się będzie poprzez stronę internetową. 
+                                    Przewidywany koszt wjazdu najprawdopodobniej będzie wynosił około 40 zł za osobę. Dzieci do 12 roku życia wstęp wolny.
+                                    Odpowiednio wcześniej zostaną wstawione dokładne informacje jak: gdzie nabyć bilety, mapka dojazdu, szczegółowa mapka imprezy, baza noclegowa, linki i inne przydatne informacje. Mamy nadzieję że odzew będzie bardzo pozytywny ponieważ jest to pierwsza edycja takiego wydarzenia a chcemy zrobić z tego wydarzenie cykliczne :) 
+                                    Wszelkie Uwagi prosimy wstawiać w komentarzu pod postem. Postaramy się odpowiedzieć na wszystkie wątki. W międzyczasie odbędzie się kilka konkursów z nagrodami :) 
+                                    Moto Single łączmy się !!!</p>
+                        </div>
+                        <div class="col-1-of-3">
+                                JAKIŚ GIF
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="tickets" id="tickets">
+                    <h2>BILETY</h2>
+                    <!-- TODO wstawić kod w CMS -->
+                    <a href="https://ekobilet.pl/black-rook" target="_blank"><img src="http://ekobilet.pl/images/buy-buttons/ekobilet-btn-green.png"></a>
+                    <p></p>
+                </div>
+
+                <div class="attractions" id="attractions">
+                    <h2>MAPA ATRAKCJI</h2>
+                </div>
+
+                <div class="schedule" id="schedule">
+                    <h2>HARMONOGRAM</h2>
+                </div>
+
+                <div class="acommodation" id="acommodation">
+                    <h2>NOCLEGI</h2>
+                </div>
+
+                <div class="shop" id="shop">
+                    <h2>SKLEP</h2>
+                </div>
+
+                <div class="contact" id="contact">
+                    <div class="row">
+                        <div class="col-1-of-2">
+                            <!-- TODO sprawdź, czy działa na hostingu! -->
+                            <h2>KONTAKT</h2>
+                            <p>Masz pytania? Napisz do nas!</p>
+                            <form class="contact__form" action="/send_form.php" method="post">
+                                    <input type="text" name="name" id="name" placeholder="Imię *" required><br>
+                                    <input type="email" name="email" id="email" placeholder="E-mail *" required><br>
+                                    <input type="text" name="message" id="message" placeholder="Treść wiadomości.. *" required><br>
+                                    <input type="submit" value="Wyślij" class="btn btn--white btn--submit">
+                            </form>
+                        </div>
+                        <div class="col-1-of-2">
+                            <div class="contact__container">
+                                    <!-- <div style="width: 100%"><iframe width="100%" height="500" src="https://maps.google.com/maps?width=100%&height=500&hl=pl&q=pla%C5%BCa%20miejska%20zaniemy%C5%9Bl+(map)&ie=UTF8&t=&z=15&iwloc=B&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.mapsdirections.info/pl/wyznaczanie-trasy.htm">Wyznacz trasę</a></iframe></div><br /> -->
+                                <iframe class="contact__map" src="https://maps.google.com/maps?width=100%&height=500&hl=pl&q=pla%C5%BCa%20miejska%20zaniemy%C5%9Bl+(map)&ie=UTF8&t=&z=15&iwloc=B&output=embed" frameborder="1"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> <!-- koniec sekcji about -->
+        </main>
+
+        <footer>
+            <div class="social">
+                <h3>Znajdziesz nas na:</h3>
+                    <a href="https://www.facebook.com/events/558893701543379/" class="btn"><img src="/img/facebook-icon_small.png" alt="facebook"></a>
+                    <a href="www.google.pl" class="btn"><img src="/img/insta-icon_small.png" alt="insta"></a>
+            </div>
+            <div class="author">
+                <p>Created with passion by <a href="" class="qatta">QATTA</a> &copy; 2020 </p>
+            </div>
+        </footer>
+    
+    </setion>
+
+</body>
+</html>

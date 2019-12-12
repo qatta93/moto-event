@@ -1,0 +1,94 @@
+.about {
+    position: relative;
+    background-color: $color-white;
+    z-index: 9999;
+
+    //wszystkie dzieci nawigacji:
+    & > * {
+        padding: 3rem 3rem 10rem 3rem;
+    }
+}
+
+
+.info {
+    background-color: $color-grey-light;
+    &__text {        
+        margin-top: 2rem;
+    }
+}
+
+.tickets {
+    background-color: $color-white;
+    height: 70rem;
+}
+
+.attractions {
+    background-color: $color-grey-dark;
+    height: 70rem;
+    h2 {
+        color: $color-white;
+    }
+}
+
+.schedule {
+    background-color: $color-white;
+    height: 70rem;
+}
+
+.acommodation {
+    background-color: rgba($color-purple-light, .2);
+    height: 70rem;
+}
+
+.shop {
+    color: white;
+    background-color: $color-grey-dark;
+    height: 70rem;
+}
+
+.contact {
+    background-color: rgba($color-purple-light, .2);
+    height: 55rem;
+
+    &__form {
+        margin-top: 5rem;
+
+        & > *:not(:last-child) {
+            width: 40rem;
+            margin: 0.5rem 0;
+            padding: 0.9rem;
+            color: $color-grey-medium;
+            letter-spacing: 0.1rem;
+            font-size: 1.2rem;
+            border-radius: 1rem;
+            border: 1px solid $color-grey-light;
+            //usuwa borde stworzony przez przeglądarkę
+            outline: none;
+
+            &:focus {
+                background-color: rgba($color-grey-dark, .8);
+                color: yellow;
+            }
+        }
+        // TODO szersza sekcja treści
+
+    }
+    &__container {
+        position: relative;
+        overflow: hidden;
+        height: 40rem;
+        width: 80%;
+    }
+
+    &__map {
+        position: absolute;
+        top: 3rem;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+}
+
+
+

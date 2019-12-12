@@ -1,0 +1,75 @@
+.header {
+    position: relative;
+    top: 0rem;
+    left: 0rem;
+    height: 80rem;
+    width: 100%;
+    background-image: url(/img/main1_small.jpg);
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__navi {
+        position: fixed;
+        height: 5rem;
+        width: 100%;
+        background-color: $color-black;
+        z-index: 99999;
+        overflow: hidden;
+        border-bottom: 1px solid black;
+
+        &-logo {
+            height: 5rem;
+            width: auto;
+            overflow: hidden;
+        }
+
+        &-title {
+            position: absolute;
+            width: 30rem;
+            text-align: center;
+            top: 0rem;
+            left: 5.2rem;
+            color: black;
+            background-color: white;
+            font-family: 'Permanent Marker', cursive;
+            font-size: 3rem;
+        }
+
+        &-list {
+            color: $color-white;
+            position: absolute;
+            top: 30%;
+            right: 1.5rem;
+            transition: all .4s;
+
+            li {
+            font-size: 1.2rem;
+            display: inline;
+            margin-right: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.3rem;
+            word-spacing: 0.3rem;
+            }
+
+            &-link {
+                &,
+                &:link,
+                &:visited {
+                    text-decoration: none;
+                    color: $color-white;
+                }
+                &:hover,
+                &:active {
+                    color: $color-blue-light;
+                    transform: translateX(1rem);
+                }
+            }
+
+        }
+    }
+
+
+    &__text {
+    }
+}

@@ -1,0 +1,94 @@
+
+// POZMIENIAJ KOLORY !!!
+
+.btn {
+    & {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        /* zapobiega nakładaniu się obiektów */
+        display: inline-block;
+        /* zaokrągla krawędzie przycisku */
+        border-radius: 10rem;
+        transition: all .2s;
+        /* punkt odniesienia dla elementu pod nim */
+        position: relative;
+        font-size: $default-font-size;
+
+        //change for the <button> element
+        border: none;
+        cursor: pointer;
+    }
+
+    &:hover {
+        transform: translateY(-.3rem);
+        box-shadow: 0 1rem 2rem rgba($color-black, .2);
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+
+    &:focus,
+    &:active {
+        outline: none;
+        transform: translateY(-.1rem);
+        box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+    }
+
+    &--white {
+        background-color: $color-white;
+        color: $color-grey-dark;
+        &::after {
+            background-color: $color-white;
+        }
+    }
+
+    &--blue {
+        background-color: $color-blue-light;
+        color: $color-black;
+        &::after {
+            background-color: $color-blue-light;
+        }
+    }
+
+            /* pseudoelement */
+        &::after {
+            /* bez tego nie działa */
+            content: "";
+            display: inline-block;
+            /* parametry buttona */
+            height: 100%;
+            width: 100%;
+            border-radius: 10rem;
+            /* obsolute musi mieć punkt odniesienia - element "na wierzchu"
+            zapobiega wizualnemu zlaniu się elementów */
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: all .4s;
+        }
+
+    &--animated {
+        /* 3s opóźnienia animacji */
+        animation: moveInBottom .5s ease-out 8.5s;
+        /* apply 0% before the animation starts */
+        animation-fill-mode: backwards;
+    }
+
+    &--intro {
+        position: absolute;
+        top: 85%;
+        left: 45%;
+        text-align: center;
+    }
+
+    &--submit {
+        margin-top: 1rem;
+        border: 1px solid $color-grey-medium;
+        padding: 1rem 2rem;
+        margin-left: 15rem;
+        letter-spacing: 0.1rem;
+    }
+}

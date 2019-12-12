@@ -1,0 +1,63 @@
+@keyframes slide {
+     0% { left: 100%; width: 100%; }
+     5% { left: 0%; }
+     25% { left: 0%; }
+     30% { left: -100%; width: 100%; }
+    30.0001% { left: -100%; width: 0%; }
+     100% { left: 100%; width: 0%; }
+    }
+
+/* animation */
+@keyframes moveInLeft {
+    /* zaczyna się w 0 */
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80% {
+        transform: translateX(1rem);
+    }
+
+    /* kończy się na 100% */
+    100% {
+        opacity: 1;
+        /* wraca do pozycji wyjściowej */
+        transform: translate(0);
+    }
+}
+/* można obracać - rotate */
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+    80% {
+        transform: translateX(-1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes animate {
+    0% {
+      background-position: -500%;
+    }
+    100% {
+      background-position: 500%;
+    }
+  }
+

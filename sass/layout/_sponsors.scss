@@ -1,0 +1,11 @@
+.sponsors {
+    position: relative;
+    height: 8rem;
+    width: 100%;
+    background: $color-white;
+    text-align: center;
+    border: 1px solid;
+    font-size: 4rem;
+
+    p { @include absCenter; }
+}
