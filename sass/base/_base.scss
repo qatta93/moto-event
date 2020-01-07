@@ -29,9 +29,13 @@ html {
     }
 
     
-    @include respond(phone) {          //1rem = 7px   44%
+    @include respond(phone-land) {          //1rem = 7px   44%
          font-size: 44%;
     }
+
+    @include respond(phone-port) {          //1rem = 6px   37,5%
+        font-size: 37.5%;
+   }
 
     @include respond(big-desktop) {
         font-size: 75%;               //1rem = 10px; 10/16 = 62%;

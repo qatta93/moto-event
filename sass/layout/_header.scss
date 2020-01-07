@@ -11,37 +11,37 @@
 
     &__navi {
         position: fixed;
-        height: 5rem;
+        height: 7rem;
         width: 100%;
         background-color: $color-black;
         z-index: 99999;
         overflow: hidden;
         border-bottom: 1px solid black;
 
-        &-logo {
+
+        @include respond(tab-land) {
             height: 5rem;
-            width: auto;
-            overflow: hidden;
         }
 
-        &-title {
-            position: absolute;
-            width: 30rem;
-            text-align: center;
-            top: 0rem;
-            left: 5.2rem;
-            color: black;
-            background-color: white;
-            font-family: 'Permanent Marker', cursive;
-            font-size: 3rem;
+        &-logo {
+            height: 100%;
+            width: auto;
+            overflow: hidden;
         }
 
         &-list {
             color: $color-white;
             position: absolute;
-            top: 30%;
             right: 1.5rem;
             transition: all .4s;
+            z-index: 999999999;
+            top: 50%;                         /* 3 */
+            transform: translate(0, -50%);
+            
+        
+            @include respond(tab-port) {
+
+            }
 
             li {
             font-size: 1.2rem;
@@ -50,6 +50,20 @@
             text-transform: uppercase;
             letter-spacing: 0.3rem;
             word-spacing: 0.3rem;
+
+            @include respond(tab-port) {
+                font-size: 0.5rem;
+                letter-spacing: 0rem;
+                word-spacing: 0rem;
+            }
+            @include respond(tab-land) {
+                font-size: 1.1rem;
+                letter-spacing: 0.1rem;
+                word-spacing: 0.1rem;
+            }
+            @include respond(big-desktop) {
+                font-size: 1.6rem;
+            }
             }
 
             &-link {
@@ -70,6 +84,15 @@
     }
 
 
-    &__text {
+    &__bg {
+        position: absolute;
+        top: 4.5rem;
+        height: 80rem;
+        width: 100%;
+        background-image: url(/img/main1_small.jpg);
+        background-position: top center;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 }
+

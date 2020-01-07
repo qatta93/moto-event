@@ -77,13 +77,6 @@
         animation-fill-mode: backwards;
     }
 
-    &--intro {
-        position: absolute;
-        top: 85%;
-        left: 45%;
-        text-align: center;
-    }
-
     &--submit {
         margin-top: 1rem;
         border: 1px solid $color-grey-medium;

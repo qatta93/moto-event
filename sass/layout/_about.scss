@@ -5,27 +5,32 @@
 
     //wszystkie dzieci nawigacji:
     & > * {
-        padding: 3rem 3rem 10rem 3rem;
+        padding: 3rem 7rem 5rem 7rem;
     }
 }
 
 
 .info {
     background-color: $color-grey-light;
-    &__text {        
-        margin-top: 2rem;
+
+    &__box {
+    
+        text-align: justify;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
     }
 }
 
 .tickets {
     background-color: $color-white;
-    height: 70rem;
+    height: 25rem;
+    text-align: center;
 }
 
 .attractions {
     background-color: $color-grey-dark;
     height: 70rem;
-    h2 {
+    h1 {
         color: $color-white;
     }
 }
